@@ -3,7 +3,7 @@ FROM node:alpine
 ENV CI=true
 ENV WDS_SOCKET_PORT=0
 WORKDIR /app
-COPY ./client/package.json .
+COPY ./client/package.json ./client/package-lock.json ./
 RUN npm ci
 
 # copy everything to app folder
