@@ -6,7 +6,7 @@ pipeline {
         EKS_API = 'https://82AE94078DCC9C0CAA07A28A674B89CC.yl4.us-west-1.eks.amazonaws.com'
         EKS_CLUSTER_NAME = 'test-cluster'
         EKS_JENKINS_CREDENTIAL_ID = '97230b33-2ede-44f9-a0c6-5b16bcd9c5dc'
-        ECR_PATH = '913524939383.dkr.ecr.us-west-1.amazonaws.com/test-ecr/'
+        ECR_PATH = 'public.ecr.aws/a7n9s4d5/testecr/'
         ECR_IMAGE = 'client'
         AWS_CREDENTIAL_ID = '97ea2ac7-5908-444b-9074-35e603a9e111'
     }
