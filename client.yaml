@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: client-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: client
+  # template section describes exactly how every pod that is created and managed by this deployment should behave
+  template:
+    metadata:
+      labels:
+        app: client
+    spec:
+      containers:
+        - name: client
+          image: 913524939383.dkr.ecr.us-west-1.amazonaws.com/test-ecr/client
+
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: client-srv
+spec:
+  # 이게 위에있는 depl template 안에있는 metadata 랑 일치해야 pod 찾을수있음
+  selector:
+    app: client
+  ports:
+    # 이걸 logging purpose 별로안중요
+    - name: client
+      port: 80
+      targetPort: 8080
