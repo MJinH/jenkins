@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: client
-          image: 913524939383.dkr.ecr.us-west-1.amazonaws.com/test-ecr/client
+          image: 913524939383.dkr.ecr.us-west-1.amazonaws.com/test-ecr/client:v32
 
 
 ---
