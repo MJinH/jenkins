@@ -17,7 +17,7 @@ spec:
         - name: client
           image: 913524939383.dkr.ecr.us-west-1.amazonaws.com/test-ecr/client:v32
           ports:
-            - containerPort: 8080
+            - containerPort: 3000
           resources:
             requests:
               memory: "512Mi"
@@ -41,4 +41,4 @@ spec:
     # 이걸 logging purpose 별로안중요
     - name: client
       port: 80
-      targetPort: 8080
+      targetPort: 3000
