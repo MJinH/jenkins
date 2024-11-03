@@ -16,6 +16,13 @@ spec:
       containers:
         - name: client
           image: 913524939383.dkr.ecr.us-west-1.amazonaws.com/test-ecr/client:v32
+          resources:
+            requests:
+              memory: "512Mi"
+              cpu: "250m"
+            limits:
+              memory: "1Gi"
+              cpu: "500m"
 
 ---
 
