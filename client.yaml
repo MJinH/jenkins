@@ -25,7 +25,7 @@ kind: Service
 metadata:
   name: client-srv
 spec:
-  type: LoadBalancer
+  type: NodePort
   # 이게 위에있는 depl template 안에있는 metadata 랑 일치해야 pod 찾을수있음
   selector:
     app: client
